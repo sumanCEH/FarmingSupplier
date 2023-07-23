@@ -1,0 +1,88 @@
+/* Add custom styles here, or you can use the existing Bootstrap classes */
+
+
+.container {
+    margin-top: 30px;
+  }
+  
+  .jumbotron {
+    /* text-align: center;*/
+    /* background-color: #f0f0f0; */
+    background-image: url('https://cdn.pixabay.com/photo/2017/10/22/20/38/table-2879201_1280.jpg');
+    background-size: cover;
+
+    color: #fff;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+
+
+  }
+
+  .jumbotron:hover {
+    transform: scale(1.05);
+  }
+
+.jumbotron h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #100f0f;
+  }
+  
+.jumbotron p {
+    font-size: 24px;
+  }
+  
+  .panel {
+    border-radius: 0;
+  }
+  
+
+  /* Custom CSS styles for the logo */
+/*.navbar-brand img {
+    max-height: 50px; /* Adjust the height of the logo as needed */
+    /* margin-bottom: -5px; */
+   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease-in-out;
+
+    margin-top: -25px; /* Optional: Adjust the vertical alignment of the logo */
+  /*}*/
+
+/* .navbar-brand img:hover {
+    opacity: 0.6;
+} */
+  
+
+
+
+  /* Custom CSS styles for the navigation bar */
+/*.navbar {
+  margin-bottom: 20px; /* Add some space below the navigation bar */
+  /* background: #1c7d59; */
+/* } */
+
+/* .navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  width: 400px;
+} */
+
+/* .navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+} */
+
+/* .navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background-color: #f0f0f0;
+  color: #555;
+} */

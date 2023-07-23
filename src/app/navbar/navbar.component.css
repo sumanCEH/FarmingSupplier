@@ -1,0 +1,68 @@
+/* navbar.component.css */
+
+/* .navbar {
+    background-color: #f8f8f8;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px;
+  }
+  
+  .navbar-toggle {
+    margin-top: 15px;
+  }
+  
+  .navbar-nav li {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav li a {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar-nav li a:hover {
+    color: #007bff;
+  } */
+
+
+
+.navbar-brand img {
+    max-height: 50px; /* Adjust the height of the logo as needed */
+    margin-bottom: -5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease-in-out;
+
+    margin-top: -15px; /* Optional: Adjust the vertical alignment of the logo */
+}
+
+.navbar-brand img:hover {
+    opacity: 0.6;
+}
+  
+
+.navbar {
+    margin-bottom: 0px; /* Add some space below the navigation bar */
+    background: #1c7d59;
+    padding: 20px;
+ }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    width: 400px;
+  }
+  
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(9, 9, 9);
+  }
+  
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus {
+    background-color: #f0f0f0;
+    color: #555;
+  }

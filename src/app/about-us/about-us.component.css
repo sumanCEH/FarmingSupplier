@@ -1,0 +1,12 @@
+/* about-us.component.css */
+
+.page-header {
+    margin-bottom: 30px;
+  }
+  
+
+.row p {
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}

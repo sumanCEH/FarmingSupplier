@@ -1,0 +1,20 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+ /* Set the global background color for the entire application */
+/* body {
+     background-image: url('https://cdn.pixabay.com/photo/2017/10/22/20/42/table-2879213_1280.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+   /* background-repeat: no-repeat; /* Prevent the image from repeating */
+     /*background-position: center center; /* Center the image horizontally and vertically */
+    /*background-color: #f0f0f0; /* Light grey background color */
+    /*margin: 0;
+    padding: 0;
+    /*background-color: rgba(240, 240, 240, 0.7); /* Use rgba(RED, GREEN, BLUE, OPACITY) */
+  /*} */
+  
+
+
+    body, html {
+    overflow: hidden;
+  }

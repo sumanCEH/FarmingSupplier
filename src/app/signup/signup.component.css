@@ -1,0 +1,61 @@
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+.main-signUp {
+
+    background-image: url('https://cdn.pixabay.com/photo/2023/06/21/18/18/barley-8079965_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* overflow: hidden; */
+  }
+
+
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Add a light background color with some opacity */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    /* height: 400px; */
+    overflow: hidden;
+    margin-bottom: 100px;
+
+    transition: transform 0.3s ease-in-out;
+    
+    
+  }
+
+  .container:hover {
+    transform: scale(1.08); /* Change the scaling factor to your desired hover effect */
+  }
+
+  .signup-form {
+    padding: 20px; /* Add padding to the top and bottom */
+    /*background-color: #f8f8f8; /* Optional: Add a light background color */
+    background-color: rgba(247, 247, 247, 0.2);
+    border-radius: 5px; /* Optional: Add border radius to make it more visually appealing */
+
+    
+  }
+  
+.form-group button {
+    background: #1c7d59;
+}
+
+.form-group p {
+    color: rgb(7, 7, 7);
+}
+
+.form-group p a {
+    color: #337ab7
+}
+
+/* Add the following styles to center the form */
+
+
+
+

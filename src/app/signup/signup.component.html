@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+  <!-- design  -->
+
+
+
+<div class="main-signUp">
+  <div class="container">
+    <h2 class="text-center">Sign Up</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-xs-3 control-label">Name:</label>
+        <div class="col-xs-9">
+          <input type="text" class="form-control" id="name" formControlName="name">
+          <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)" class="text-danger">
+            <div *ngIf="signupForm.get('name')?.errors?.['required']">Name is required.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email" class="col-xs-3 control-label">Email:</label>
+        <div class="col-xs-9">
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)" class="text-danger">
+            <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+            <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password" class="col-xs-3 control-label">Password:</label>
+        <div class="col-xs-9">
+          <input type="password" class="form-control" id="password" formControlName="password">
+          <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)" class="text-danger">
+            <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</div>
+            <div *ngIf="signupForm.get('password')?.errors?.['minlength']">Password should have at least 6 characters.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="mobile" class="col-xs-3 control-label">Mobile:</label>
+        <div class="col-xs-9">
+          <input type="text" class="form-control" id="mobile" formControlName="mobile">
+          <div *ngIf="signupForm.get('mobile')?.invalid && (signupForm.get('mobile')?.dirty || signupForm.get('mobile')?.touched)" class="text-danger">
+            <div *ngIf="signupForm.get('mobile')?.errors?.['required']">Mobile is required.</div>
+            <div *ngIf="signupForm.get('mobile')?.errors?.['pattern']">Invalid mobile number format.</div>
+            <div *ngIf="signupForm.get('mobile')?.errors?.['minlength']">Mobile number should have 10 digits.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="userType" class="col-xs-3 control-label">User Type:</label>
+        <div class="col-xs-9">
+          <select class="form-control" id="userType" formControlName="userType">
+            <option value="" disabled selected>Select User Type</option>
+            <option value="admin">Admin</option>
+            <option value="farmer">Farmer</option>
+            <option value="supplier">Supplier</option>
+          </select>
+          <div *ngIf="signupForm.get('userType')?.invalid && (signupForm.get('userType')?.dirty || signupForm.get('userType')?.touched)" class="text-danger">
+            <div *ngIf="signupForm.get('userType')?.errors?.['required']">User Type is required.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9">
+          <p>Already have an account? <a routerLink="/login">Login</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <app-footer></app-footer> -->
