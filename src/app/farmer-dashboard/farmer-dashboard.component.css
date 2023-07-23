@@ -1,0 +1,39 @@
+/* dashboard.component.css */
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Set the container height to full viewport height */
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  width: 200px; /* Reduce the navbar width */
+  padding: 20px;
+  height: 100%; /* Make the navbar take the full height of the dashboard container */
+  border-radius: 0; /* Remove rounded edges */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  height: 100%; /* Set the list to take the full height of the navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align list items to the top */
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px; /* Increase the font size */
+  padding: 8px; /* Adjust the padding around the links */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}

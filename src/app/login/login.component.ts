@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit{
         const userRole = decodedToken.role;
         console.log(userRole[0].authority);
 
+        localStorage.setItem('useremail', email);
+
         // Redirect according to the role
         if (userRole[0].authority === 'ROLE_ADMIN') {
           this.router.navigate(['/admin']); // Replace '/admin' with your admin page route

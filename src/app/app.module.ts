@@ -22,6 +22,8 @@ import { FarmerDashboardComponent } from './farmer-dashboard/farmer-dashboard.co
 import { LoginComponent } from './login/login.component';
 import { ViewComplaintComponent } from './view-complaint/view-complaint.component';
 import { UpdateComplaintComponent } from './update-complaint/update-complaint.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
+import { ProfileeditComponent } from './profileedit/profileedit.component';
 // import { AuthGuard } from './auth.guard';
 
 
@@ -37,6 +39,8 @@ const routes: Routes = [
   { path: 'view-complaint', component: ViewComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
   { path: 'update-complaint', component: UpdateComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
   // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path: 'edit-profile', component: EditprofileComponent},
+  {path: 'edit-profile2', component: ProfileeditComponent},
   { path: '**', redirectTo: '/login' },
   { path: 'view-complaint', component: ViewComplaintComponent },
   { path: 'update-complaint', component: UpdateComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
@@ -55,7 +59,9 @@ const routes: Routes = [
     SupplierDashboardComponent,
     FarmerDashboardComponent,
     ViewComplaintComponent,
-    UpdateComplaintComponent
+    UpdateComplaintComponent,
+    EditprofileComponent,
+    ProfileeditComponent
   ],
   imports: [
     BrowserModule,
