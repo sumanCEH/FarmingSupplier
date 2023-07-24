@@ -8,21 +8,54 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  // @Input() userRole!: string;
+
+  // constructor(private authService: AuthService,
+  //   private router: Router) { }
+
+  // ngOnInit(): void {
+  // }
+
+  // onLogout() {
+  //   this.authService.logout();
+  //   this.router.navigate(['/login']);
+  // }
+
+  // isAuthenticated() {
+  //   return this.authService.isAuthenticated();
+  // }
+
+
+
   @Input() userRole!: string;
 
-  constructor(private authService: AuthService,
-    private router: Router) { }
+  isAuthenticated = false;
+
+
+
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+
+
 
   ngOnInit(): void {
+
+    this.isAuthenticated = this.authService.isAuthenticated();
+
   }
+
+
+
 
   onLogout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
-  }
 
-  isAuthenticated() {
-    return this.authService.isAuthenticated();
+    this.authService.logout();
+
+    this.isAuthenticated = false;
+
+    this.router.navigate(['/login']);
+
   }
 
 }

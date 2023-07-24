@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<!-- <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -20,10 +20,43 @@
           <li *ngIf="userRole === 'admin'" routerLinkActive="active"><a routerLink="/view-complaint">View Complaints</a></li>
           <li *ngIf="userRole === 'admin'" routerLinkActive="active"><a routerLink="/update-complaint">Update Complaints</a></li>
           <li *ngIf="isAuthenticated()" routerLinkActive="active"><a (click)="onLogout()">Logout</a></li>
-          <!-- <li routerLinkActive="active"><a href="#" (click)="onLogout()">Logout</a></li> -->
+          <li routerLinkActive="active"><a href="#" (click)="onLogout()">Logout</a></li>
 
         </ul>
       </div>
     </div>
   </nav>
-  
+   -->
+
+
+   
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">
+        <img src="../../assets/farma-logo.png" alt="">
+      </a>
+    </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <!-- Always show these buttons -->
+      <li routerLinkActive="active"><a routerLink="/about-us">About Us</a></li>
+      <li routerLinkActive="active"><a href="#">Contact Us</a></li>
+      
+      <!--Show these buttons only if the userRole is 'admin' -->
+       <ng-container *ngIf="userRole === 'admin'">
+        <li  routerLinkActive="active"><a routerLink="/view-complaint">View Complaints</a></li>
+        <li routerLinkActive="active"><a routerLink="/update-complaint">Update Complaints</a></li>
+      </ng-container>
+      <!-- Show the following buttons based on login status -->
+      <li *ngIf="!isAuthenticated" routerLinkActive="active"><a routerLink="/signup">Sign Up</a></li>
+      <li *ngIf="!isAuthenticated" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+      <li *ngIf="isAuthenticated" routerLinkActive="active"><a (click)="onLogout()">Logout</a></li>
+    </ul>
+  </div>

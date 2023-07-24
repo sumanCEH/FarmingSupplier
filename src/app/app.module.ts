@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 
@@ -24,6 +24,12 @@ import { ViewComplaintComponent } from './view-complaint/view-complaint.componen
 import { UpdateComplaintComponent } from './update-complaint/update-complaint.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ProfileeditComponent } from './profileedit/profileedit.component';
+import { ComplaintService } from './complaint.service';
+// import { MyproductsComponent } from './myproducts/myproducts.component';
+
+
+// import { AuthInterceptor } from './auth.interceptor';
+// import { AppRoutingModule } from './app.module';
 // import { AuthGuard } from './auth.guard';
 
 
@@ -42,26 +48,27 @@ const routes: Routes = [
   {path: 'edit-profile', component: EditprofileComponent},
   {path: 'edit-profile2', component: ProfileeditComponent},
   { path: '**', redirectTo: '/login' },
-  { path: 'view-complaint', component: ViewComplaintComponent },
-  { path: 'update-complaint', component: UpdateComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
+  // { path: 'view-complaint/:id', component: ViewComplaintComponent },
+  // { path: 'update-complaint', component: UpdateComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SignupComponent,
-    LoginComponent,
-    HomeComponent,
-    FooterComponent,
-    NavbarComponent,
-    AboutUsComponent,
-    AdminDashboardComponent,
-    SupplierDashboardComponent,
-    FarmerDashboardComponent,
-    ViewComplaintComponent,
-    UpdateComplaintComponent,
-    EditprofileComponent,
-    ProfileeditComponent
+   AppComponent,
+   SignupComponent,
+   LoginComponent,
+   HomeComponent,
+   FooterComponent,
+   NavbarComponent,
+   AboutUsComponent,
+   AdminDashboardComponent,
+   SupplierDashboardComponent,
+   FarmerDashboardComponent,
+   ViewComplaintComponent,
+   UpdateComplaintComponent,
+   EditprofileComponent,
+   ProfileeditComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -73,9 +80,12 @@ const routes: Routes = [
      // Add ReactiveFormsModule to the imports array
   ],
 
-  // exports: [RouterModule],
+  exports: [RouterModule],
 
-  providers: [AuthService],
+  providers: [
+
+    ComplaintService,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

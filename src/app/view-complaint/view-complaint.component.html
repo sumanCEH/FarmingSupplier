@@ -1,1 +1,55 @@
-<p>view-complaint works!</p>
+
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="card-title">Complaints List</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let complaint of complaints">
+                <div class="row">
+                  <div class="col-md-2 text-center">
+                    <div class="complaint-id">{{ complaint.id }}</div>
+                  </div>
+                  <div class="col-md-10">
+                    <div class="complaint-message"><strong>ComplaintMessage:</strong> {{ complaint.complaintMessage }}</div>
+                    <div class="complaint-status">
+                      <strong>Status:</strong> {{ complaint.status }}
+                    </div>
+                    <div class="complaint-user">
+                      <strong>User Name:</strong> {{ complaint.farmer.name }}
+                    </div>
+                    <div class="complaint-user-role">
+                      <strong>User Role:</strong> {{ complaint.farmer.role }}
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <form (submit)="updateStatus(complaint.id)">
+                      <div class="form-group">
+                        <label for="status">New Status:</label>
+                        <select class="form-control" id="status" name="status" [(ngModel)]="complaint.newStatus">
+                          <option value="Read">Read</option>
+                          <option value="Unread">Unread</option>
+                          <!-- <option value="Closed">Closed</option> -->
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Update</button>
+
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<app-footer></app-footer>
