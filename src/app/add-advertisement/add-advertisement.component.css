@@ -1,0 +1,48 @@
+/* add-advertisement.component.css */
+
+/* Container for the form */
+.add-advertisement-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form fields */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Submit button */
+  .form-submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  /* Success message */
+  .success-message {
+    color: green;
+    margin-top: 5px;
+  }
+  

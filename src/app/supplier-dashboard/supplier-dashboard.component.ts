@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../userService';
 
 @Component({
   selector: 'app-supplier-dashboard',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupplierDashboardComponent implements OnInit {
 
-  constructor() { }
+
+  id: number;
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getuserDetails();
+  }
+
+  getuserDetails(){
+    this.userService.getsupplier().subscribe((data: any)=>{
+// console.log(data);
+this.id = data.id;
+console.log(this.id);
+localStorage.setItem('id', this.id.toString());
+    })
   }
 
 }

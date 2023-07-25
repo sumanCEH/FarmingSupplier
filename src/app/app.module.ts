@@ -25,6 +25,7 @@ import { UpdateComplaintComponent } from './update-complaint/update-complaint.co
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ProfileeditComponent } from './profileedit/profileedit.component';
 import { ComplaintService } from './complaint.service';
+import { AddAdvertisementComponent } from './add-advertisement/add-advertisement.component';
 // import { MyproductsComponent } from './myproducts/myproducts.component';
 
 
@@ -32,7 +33,7 @@ import { ComplaintService } from './complaint.service';
 // import { AppRoutingModule } from './app.module';
 // import { AuthGuard } from './auth.guard';
 
-
+import { UserService } from './userService';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,8 @@ const routes: Routes = [
   { path: '**', redirectTo: '/login' },
   // { path: 'view-complaint/:id', component: ViewComplaintComponent },
   // { path: 'update-complaint', component: UpdateComplaintComponent, canActivate: [AuthGuard], data : {role: 'ROLE_ADMIN'} },
+  { path: 'add-advertisement', component: AddAdvertisementComponent,canActivate: [AuthGuard], data : {role: 'ROLE_SUPPLIER'} }
+
 ];
 
 @NgModule({
@@ -68,6 +71,7 @@ const routes: Routes = [
    UpdateComplaintComponent,
    EditprofileComponent,
    ProfileeditComponent,
+   AddAdvertisementComponent,
    
   ],
   imports: [
@@ -85,7 +89,9 @@ const routes: Routes = [
   providers: [
 
     ComplaintService,
-    AuthService],
+    AuthService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

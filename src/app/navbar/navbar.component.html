@@ -54,6 +54,8 @@
         <li  routerLinkActive="active"><a routerLink="/view-complaint">View Complaints</a></li>
         <li routerLinkActive="active"><a routerLink="/update-complaint">Update Complaints</a></li>
       </ng-container>
+
+
       <!-- Show the following buttons based on login status -->
       <li *ngIf="!isAuthenticated" routerLinkActive="active"><a routerLink="/signup">Sign Up</a></li>
       <li *ngIf="!isAuthenticated" routerLinkActive="active"><a routerLink="/login">Login</a></li>

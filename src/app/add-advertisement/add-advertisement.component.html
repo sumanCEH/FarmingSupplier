@@ -1,0 +1,19 @@
+<div class="add-advertisement-container">
+    <h2>Add Advertisement</h2>
+    <form (submit)="submitForm()">
+      <div>
+        <label for="cropName" class="form-label">Crop Name:</label>
+        <input type="text" id="cropName" name="cropName" class="form-input" [(ngModel)]="advertisement.cropName" required>
+      </div>
+      <div>
+        <label for="quantityRequired" class="form-label">Quantity Required:</label>
+        <input type="number" id="quantityRequired" name="quantityRequired" class="form-input" [(ngModel)]="advertisement.quantityRequired" required>
+      </div>
+      <div>
+        <label for="status" class="form-label">Status:</label>
+        <input type="text" id="status" name="status" class="form-input" [(ngModel)]="advertisement.status" required>
+      </div>
+      <button (click)="submitForm()">Submit</button>
+    </form>
+  </div>
+  

@@ -9,6 +9,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
   // import { GlobalErrorHandler } from '../global-error-handler/global-error-handler';
   // import { User } from '../Model/user';
 // import { catchError, Observable, tap, throwError } from 'rxjs';
+import { UserService } from '../app/userService';
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,18 @@ export class AuthService {
 
   private apiUrl = 'http://localhost:9002'; // Replace with your Spring Boot backend API URL
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router , private userService: UserService) {}
 
   login(email: string, password: string) {
     return this.http.post<any>(`${this.apiUrl}/token`, { email, password });
   }
 
+  
+ 
+// Add the getAuthToken() method
+getAuthToken(): string | null {
+  return localStorage.getItem('token');
+}
   saveToken(token: string) {
     
     localStorage.setItem('token', token);
