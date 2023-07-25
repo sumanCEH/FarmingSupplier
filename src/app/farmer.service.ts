@@ -10,6 +10,12 @@ export class FarmerService {
 
   constructor(private http:HttpClient) { }
 
+  addadvertisement(){
+    const token = localStorage.getItem('token');
+    const header = new HttpHeaders({"Authorization": "Bearer " + token});
+    return this.http.post(`http://localhost:9002/supplier/postAdd`, {headers: header});
+  }
+
   
 
   getFarmerDetails(email: string) {
